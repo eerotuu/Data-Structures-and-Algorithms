@@ -17,19 +17,17 @@ public class Teht_12 {
     public static void main(String[] args) {
         // TODO code application logic here
         ClosedHashing ch = new ClosedHashing(7);
-        ch.insert(3);
-        ch.insert(9);
-        ch.insert(10);
-        ch.insert(17);
-        ch.insert(20);
-        ch.insert(17);
-        ch.insert(20);
-        ch.insert(17);
-        ch.insert(20);
+        int[] data = new int[] {
+            6, 14, 5, 20, 18, 17, 2, 23
+        };
+        
+        for(int value : data) {
+            ch.insert(value);
+        }
         
         
-        System.out.println(ch.find(9));
-        System.out.println(ch.find(8));
+        System.out.println("find index of value 20: " + ch.find(20));
+        System.out.println("find index of value 8: " + ch.find(8));
         
     }
     
