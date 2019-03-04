@@ -18,11 +18,14 @@ public class Teht_11 {
         // TODO code application logic here
         
         BinaryHeap heap = new BinaryHeap(8);
+        int[] data = new int[] {
+            32, 54, 15, 7, 65, 20, 4, 38, 27, 44
+        };
+        for(int value : data) {
+            heap.insert(value);
+        }
         
-        heap.insert(6);
-        heap.insert(9);
-        heap.insert(3);
-        
+        System.out.println("\nprinting full list:");
         for(int i = 0 ; i<heap.size(); i++) {
             System.out.print(heap.get(i) + " ");
         }

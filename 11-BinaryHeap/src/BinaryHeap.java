@@ -22,11 +22,12 @@ public class BinaryHeap {
     }
 
     public void insert(int key) {
+        System.out.println("adding " + key);
         if (heapSize == capacity) {
-            System.out.println("full");
+            System.out.println("list full");
             return;
         }
-
+        
         int i = heapSize;
         heap[i] = key;
 
@@ -39,6 +40,7 @@ public class BinaryHeap {
         }
 
         heapSize++;
+        System.out.println("added: " + key + ", index: " + i);
     }
 
     public void deleteMin() {
@@ -80,6 +82,7 @@ public class BinaryHeap {
     }
 
     private void swap(int x, int y) {
+        System.out.println("swapping " + heap[x] + " and " + heap[y]);
         int temp = heap[x];
         heap[x] = heap[y];
         heap[y] = temp;
